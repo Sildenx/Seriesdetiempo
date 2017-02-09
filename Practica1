@@ -1,0 +1,14 @@
+# Seriesdetiempo
+x <-1:25
+x
+mean(x)
+meAn(x)
+ls()
+y <- 2:19
+ls()
+install.packages("readxl")
+library(readxl)
+rates <- read_excel("C://Users//Sala-F26//Downloads//rates.xlsx")
+# Declaramos como serie de tiempo
+rates.ts <- ts(rates, frequency=1, start=(1))
+plot(rates.ts, ylab="Rates", xlab="Periodo", main="Paridad peso/dolar", col=2)
